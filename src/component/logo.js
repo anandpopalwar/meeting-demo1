@@ -1,9 +1,11 @@
-import React from 'react';
+import React from "react";
+import img1 from "./images/fevicon-16x16.png"
 
-const SVG = () => {
-  return (
-    <img src="./discuss1.svg "  alt="Logo" />
-  );
-};
-
-export default SVG;
+function Logo(){
+    return(
+        <div>
+            <img src={img1} alt="logo" />
+        </div>
+    )
+}
+export default Logo;
