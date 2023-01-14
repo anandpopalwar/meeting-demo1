@@ -1,23 +1,24 @@
-import logo from './logo.svg';
 import './App.css';
+import Navbar from './component/navbar';
+import Home from './pages/home'; 
+import Notfound from './pages/notfound';
+import Bookmarks from './pages/bookmarks';
+import Addmeeting from './component/Addmeeting'
+import Allmeeting from './pages/Allmeeting'
+import { Route, Routes } from 'react-router-dom';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+
+      <Navbar/>
+      <Routes>
+        <Route path='/'  element={<Home/>} />
+        <Route path='*'  element={<Notfound/>} />
+        <Route path='/bookmarks'  element={<Bookmarks/>} />
+        <Route path='/addmeeting'  element={<Addmeeting/>} />
+        <Route path='/allMeeting'  element={<Allmeeting/>} />
+      </Routes>
     </div>
   );
 }
