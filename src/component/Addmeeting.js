@@ -36,9 +36,9 @@ function Addmeeting() {
             }).then(()=>{
                 setLoading(true)
             }).then(() => {
-                setInterval(() => {
-                    navigate('/')
-                }, 2000);
+               setTimeout(() => {
+                navigate('/')
+               }, 2000);
             })
 
         }
